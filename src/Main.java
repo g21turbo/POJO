@@ -14,7 +14,7 @@ public class Main {
     public static void main(String[] args) {
 
         for (int i = 1; i <= 5; i++) {
-            Student s = new Student("S11110" + i,
+            LPAStudent s = new LPAStudent("S11110" + i,
                     switch (i) {
                 case 1 -> "Mary";
                 case 2 -> "Carol";
@@ -27,6 +27,17 @@ public class Main {
                     "Java MasterClass");
             System.out.println(s);
         }
+
+        Student pojoStudent = new Student("S99991", "Ann",
+                "5/11/1985", "Java Masterclass");
+        LPAStudent recordStudent = new LPAStudent("S99992", "Bill",
+                "5/11/1985", "Java Masterclass");
+
+        System.out.println(pojoStudent);
+        System.out.println(recordStudent);
+
+        System.out.println(pojoStudent.getName() + " is taking " + pojoStudent.getClassList());
+        System.out.println(recordStudent.name() + " is taking " + recordStudent.classList());
 
 
 
